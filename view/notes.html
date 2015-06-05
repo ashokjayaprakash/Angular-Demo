@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label for="comment">Notes</label>
+    <textarea class="form-control" cols="40" rows="5" ng-model="note" maxlength="1000" id="comment"></textarea>
+    <div class="row">
+        <div class="col-md-6">
+            <p>No of words Remaining <span ng-bind='wordLeft()'></span>
+        </div>
+        <div class="col-md-6">
+            <div class="pull-right">
+                <input type="button" ng-click="resetNote()" value="Reset" class="btn btn-sm btn-danger"></span>
+            </div>
+        </div>
+    </div>
+</div>

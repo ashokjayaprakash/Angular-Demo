@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>My Art Work</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/lib/route.min.js"></script>
+
+</head>
+<body>
+    <div ng-include="'view/header.html'"></div>
+    <div class="container">
+        <div ng-view></div>
+    </div>
+</body>
+<script src="app/myApp.js"></script>
+<script src="app/controller/GlobalController.js"></script>
+<script src="app/controller/CountryController.js"></script>
+<script src="app/controller/TimeController.js"></script>
+<script src="app/controller/NotesController.js"></script>
+
+</html>

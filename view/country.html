@@ -1,0 +1,27 @@
+<div>
+    <h1>Country Details</h1>
+    <div class="row">
+        <div class="col-md-9">
+            <input type="text" ng-model="nameFilter" placeholder="Search for a country...." ng-maxlength="10" class="form-control">
+        </div>
+        <div class="col-md-3">
+            <div class="pull-right">
+                <input type="button" ng-click="toggle()" value="Show / Hide Table" class="btn btn-info">
+            </div>
+        </div>
+    </div>
+    <table id="tableView" ng-show="table" ng-init="table=true" class="table table-responsive">
+        <thead>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Country</th>
+        </thead>
+        <tbody ng-repeat="n in name | filter:nameFilter">
+        <td>{{$index + 1}}</td>
+        <td>{{n.Name}}</td>
+        <td>{{n.City}}</td>
+        <td>{{n.Country}}</td>
+        </tbody>
+    </table>
+</div>
